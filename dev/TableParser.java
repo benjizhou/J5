@@ -45,6 +45,6 @@ public class TableParser {
             log.write("\n");
             line = data.readLine();
         }
-        log.write("\n\nStart vertex is: " + start);
+        log.write("\nStart vertex is: " + start);
     }
 }
