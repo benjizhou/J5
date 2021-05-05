@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "args": ["data01.txt", "log01.txt"]
+        },
+        {
+            "type": "java",
+            "name": "Launch SSAD",
+            "request": "launch",
+            "mainClass": "SSAD",
+            "projectName": "J5_bca6760d"
+        },
+        {
+            "type": "java",
+            "name": "Launch MinHeap",
+            "request": "launch",
+            "mainClass": "dev.MinHeap",
+            "projectName": "J5_bca6760d"
+        }
+    ]
+}

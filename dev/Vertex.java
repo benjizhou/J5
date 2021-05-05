@@ -14,6 +14,10 @@ public class Vertex {
         weights = new ArrayList<>();
     }
 
+    public void setMarked(boolean marked) {
+        this.marked = marked;
+    }
+
     public void addPath(int next) {
         path.add(next);
     }
@@ -32,5 +36,9 @@ public class Vertex {
             total += weights.get(i);
         }
         return total;
+    }
+
+    public String toString() {
+        return null;
     }
 }

@@ -8,13 +8,13 @@ import java.util.ArrayList;
 public class WeightedList {
     private int start;
     private int numVert;
-    private ArrayList<Node>[] nodeList;
+    private ArrayList<ArrayList<Node>> nodeList;
 
     public int getNumVert() {
         return numVert;
     }
 
-    public ArrayList<Node>[] getNodeList() {
+    public ArrayList<ArrayList<Node>> getNodeList() {
         return nodeList;
     }
 
@@ -37,9 +37,9 @@ public class WeightedList {
     public void toString(RandomAccessFile data, FileWriter log) throws IOException {
         String line = data.readLine();
         numVert = Integer.parseInt(line.split(" ")[3]);
-        nodeList = new ArrayList[numVert];
+        nodeList = new ArrayList<ArrayList<Node>>(numVert);
         for (int k = 0; k < numVert; k++) {
-            nodeList[k] = new ArrayList<Node>();
+            nodeList.add(new ArrayList<Node>());
         }
         line = data.readLine();
         start = Integer.parseInt(line.split(" ")[8]);
@@ -61,11 +61,10 @@ public class WeightedList {
                 if (Integer.parseInt(indexes[j]) > 0) {
                     log.write("\t" + (j-3) + ": " + indexes[j]);
                     if (indexes[j] != null) {
-                        System.out.println(indexes[j]);
                         int weight = Integer.parseInt(indexes[j]);
                         Node node = new Node(j-3, weight);
                         if (node != null) {
-                            nodeList[j-3].add(node);
+                            nodeList.get(i).add(node);
                         }
                     }
                 }
